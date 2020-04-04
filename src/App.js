@@ -5,10 +5,9 @@ import seedColors from './seedColors';
 
 class App extends React.Component {
   render() {
-    console.log(GeneratePalette(seedColors[4]))
     return (
       <div>
-        <Palette {...seedColors[4]} />
+        <Palette palette={GeneratePalette(seedColors[4])} />
       </div>
     );
   }
