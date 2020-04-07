@@ -8,21 +8,30 @@ export default class Palette extends Component {
     super(props);
     this.state = {
       level: 500,
+      format: 'hex',
     };
     this.changeLevel = this.changeLevel.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
   changeLevel(level) {
     this.setState({ level });
   }
+  handleChange(val) {
+    this.setState({ format: val });
+  }
   render() {
     const { colors } = this.props.palette;
-    const { level } = this.state;
+    const { level, format } = this.state;
     const colorBoxes = colors[level].map((color) => (
-      <ColorBox background={color.hex} name={color.name} />
+      <ColorBox background={color[format]} name={color.name} />
     ));
     return (
       <div className='Palette'>
-        <NavBar changeLevel={this.changeLevel} level={this.state.level} />
+        <NavBar
+          changeLevel={this.changeLevel}
+          handleChange={this.handleChange}
+          level={this.state.level}
+        />
         <div className='Palette-colors'>{colorBoxes}</div>
         {/* Footer */}
       </div>
