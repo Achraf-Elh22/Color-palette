@@ -10,7 +10,7 @@ const styles = {
     border: '1px solid black',
     overflow: 'hidden',
     '&:hover': {
-      cusror: 'pointer',
+      cursor: 'pointer',
     },
   },
   colors: {
@@ -45,7 +45,7 @@ const styles = {
 };
 
 function MiniPalette(props) {
-  const { classes, paletteName, emoji, colors } = props;
+  const { classes, paletteName, emoji, colors, handleClick } = props;
   const miniColorBoxes = colors.map((color) => (
     <div
       className={classes.miniColors}
@@ -55,7 +55,7 @@ function MiniPalette(props) {
   ));
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} onClick={handleClick}>
       <div className={classes.colors}>{miniColorBoxes}</div>
       <h5 className={classes.title}>
         {paletteName} <span className={classes.emoji}>{emoji}</span>
