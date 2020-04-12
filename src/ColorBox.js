@@ -61,7 +61,7 @@ const styles = {
     textAlign: 'center',
     outline: 'none',
     lineHeight: '30px',
-    background: 'rgba(255, 255, 255, 0.3)',
+    backgroundColor: 'rgba(255, 255, 255, 0.3)',
     border: 'none',
     fontSize: '1rem',
     textTransform: 'uppercase',
