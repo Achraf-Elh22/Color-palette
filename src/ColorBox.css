@@ -35,14 +35,14 @@
   text-decoration: none;
 }
 
-.copy-button {
+/* .copy-button {
   opacity: 0;
 }
 
 .ColorBox:hover .copy-button {
   opacity: 1;
   transition: 0.5s;
-}
+} */
 .box-content {
   width: 100%;
   position: absolute;
@@ -73,7 +73,7 @@
   text-transform: uppercase;
 }
 .ColorBox .dark-text {
-  color: rgba(0, 0, 0, 0.5);
+  color: 'rgba(0, 0, 0, 0.5)';
 }
 
 .copy-overlay {
