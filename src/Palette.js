@@ -5,32 +5,7 @@ import ColorBox from './ColorBox';
 import NavBar from './NavBar';
 import Footer from './Footer';
 
-import './Palette.css';
-
-const styles = {
-  Palette: {
-    height: '100vh',
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  PaletteColors: {
-    height: '90%',
-  },
-
-  PaletteFooter: {
-    background: 'white',
-    height: '5vh',
-    display: 'flex',
-    justifyContent: 'flex-end',
-    alignItems: 'center',
-    fontWeight: '500',
-  },
-
-  emoji: {
-    fontSize: '1.5rem',
-    margin: '0 1rem',
-  },
-};
+import styles from './styles/PaletteStyles';
 
 class Palette extends Component {
   constructor(props) {
@@ -69,7 +44,7 @@ class Palette extends Component {
           level={this.state.level}
           showingAllColors
         />
-        <div className={classes.PaletteColors}>{colorBoxes}</div>
+        <div className={classes.Colors}>{colorBoxes}</div>
         <Footer paletteName={paletteName} emoji={emoji} />
       </div>
     );
