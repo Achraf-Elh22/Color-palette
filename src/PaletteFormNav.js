@@ -113,7 +113,7 @@ class PaletteFormNav extends Component {
               color='primary'
               onClick={this.showForm}
             >
-              Open form dialog
+              Save
             </Button>
           </div>
         </AppBar>
