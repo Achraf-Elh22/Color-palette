@@ -7,11 +7,11 @@ import styles from './styles/MiniPaletteStyles.js';
 class MiniPalette extends Component {
   constructor(props) {
     super(props);
-    this.delteIcon = this.delteIcon.bind(this);
+    this.deletePalette = this.deletePalette.bind(this);
   }
-  delteIcon(e) {
+  deletePalette(e) {
     e.stopPropagation();
-    this.props.removePalette(this.props.id);
+    alert('Click!!!');
   }
   render() {
     const { classes, paletteName, emoji, colors, handleClick } = this.props;
@@ -23,7 +23,7 @@ class MiniPalette extends Component {
       ></div>
     ));
     return (
-      <div className={classes.root} onClick={this.delteIcon}>
+      <div className={classes.root} onClick={handleClick}>
         <DeleteIcon
           className={classes.deleteIcon}
           onClick={this.deletePalette}
