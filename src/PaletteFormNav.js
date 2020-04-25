@@ -41,6 +41,7 @@ class PaletteFormNav extends Component {
       palettes,
       handleDrawerOpen,
     } = this.props;
+    const { formShowing } = this.props;
     return (
       <div className={classes.root}>
         <AppBar
@@ -83,7 +84,7 @@ class PaletteFormNav extends Component {
             </Button>
           </div>
         </AppBar>
-        {this.state.formShowing && (
+        {formShowing && (
           <PaletteMetaForm
             palettes={palettes}
             hideForm={this.hideForm}
