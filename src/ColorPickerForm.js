@@ -4,7 +4,7 @@ import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
 
-import styles from "./styles/ColorPickerFormStyles"
+import styles from './styles/ColorPickerFormStyles';
 
 class ColorPickerForm extends Component {
   constructor(props) {
@@ -49,7 +49,7 @@ class ColorPickerForm extends Component {
           color={currentColor}
           onChangeComplete={(newColor) => this.updateCurrentColor(newColor)}
         />
-        <ValidatorForm onSubmit={this.handleSubmit}>
+        <ValidatorForm onSubmit={this.handleSubmit} instantValidate={false}>
           <TextValidator
             value={newColorName}
             name='newColorName'
